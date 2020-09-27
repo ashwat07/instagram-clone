@@ -1,14 +1,19 @@
-import { StyleSheet } from "react-native"
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-      flexDirection: "row",
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  subContainer: {
+    flexDirection: 'row',
   },
   name: {
-      alignSelf: "center",
-      fontWeight: "bold",
-      color: "#3c3c3c"
-  }
-})
+    alignSelf: 'center',
+    fontWeight: 'bold',
+    color: '#3c3c3c',
+  },
+});
 
 export default styles;
