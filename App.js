@@ -6,18 +6,22 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import {StatusBar, SafeAreaView} from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+import 'react-native-gesture-handler';
 
-const App: () => React$Node = () => {
+import React from 'react';
+import {StatusBar, Image} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import Route from './src/routes';
+
+
+
+
+const App = () => {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <HomeScreen />
-      </SafeAreaView>
-    </>
+      <Route />
+    </NavigationContainer>
   );
 };
 
