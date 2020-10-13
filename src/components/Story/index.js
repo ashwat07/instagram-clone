@@ -1,15 +1,27 @@
-import React from 'react'
-import { View, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import {View, Text, TouchableOpacity} from 'react-native';
 import ProfilePicture from '../ProfilePicture';
-import styles from "./styles";
+import styles from './styles';
 
-const Story = ({ imageUri, name }) => {
-    return (
-        <View>
-            <ProfilePicture imageUri={imageUri}/>
-            <Text style={styles.name}>{name}</Text>
-        </View>
-    )
-}
+const Story = ({story}) => {
 
-export default Story
+  const { user: { imageUri, name, id } } = story;
+
+  const navigation = useNavigation();
+  
+  const handlePress = () => {
+      navigation.navigate("Story", { id })
+  }
+
+  // console.log(imageUri)
+
+  return (
+    <TouchableOpacity style={styles.container} onPress={handlePress}>
+      <ProfilePicture imageUri={imageUri} />
+      <Text style={styles.name}>{name}</Text>
+    </TouchableOpacity>
+  );
+};
+
+export default Story;

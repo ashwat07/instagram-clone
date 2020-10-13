@@ -1,8 +1,10 @@
+import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Logo from './src/assets/images/Instagram-Logo.png';
+import {Image} from 'react-native';
 
+import Logo from '../assets/images/Instagram-Logo.png';
 import FeatherIcons from 'react-native-vector-icons/Feather';
-import HomeScreen from './src/screens/HomeScreen';
+import HomeScreen from '../screens/HomeScreen';
 import PlaneIcon from 'react-native-vector-icons/Ionicons';
 
 const Stack = createStackNavigator();

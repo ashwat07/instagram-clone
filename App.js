@@ -14,12 +14,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import Route from './src/routes';
 
 
-
-
 const App = () => {
   return (
     <NavigationContainer>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="hidden" />
       <Route />
     </NavigationContainer>
   );
